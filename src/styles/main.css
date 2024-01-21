@@ -1,0 +1,143 @@
+
+body {
+    cursor: url("../assets/cursor/yugicursor.png"), default;
+}
+
+button,
+button:hover,
+a,
+a:hover,
+img {
+    cursor: url("../assets/cursor/yamiyugicursorGLOW.png"), auto;
+}
+
+.bg-video {
+    position: absolute;
+    z-index: -2;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.bg-video .video {
+    height: 100vh;
+}
+
+.bg-video::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: linear-gradient(
+        90deg, 
+        rgba(0, 0, 0, 1) 0%,
+        rgba(0, 0, 0, 0.8) 50%,
+        rgba(0, 0, 0, 1) 100%
+    );
+}
+
+.container {
+    position: relative;
+    z-index: 3;
+    display: flex;
+    height: 100vh;
+}
+
+.container__left {
+    width: 35%;
+    min-width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.container_right {
+    width: 65%;
+}
+
+.frame {
+    border: 3px solid;
+    border-radius: 5px;
+}
+
+.score_box {
+    background-color: #fff;
+    padding: 1rem;
+}
+
+.card_details {
+    background-color: #fff;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 6rem;
+}
+
+#card-name {
+    font-size: 0.8rem;
+}
+#card-type {
+    font-size: 1rem;
+}
+
+.card-box__container {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 100vh;
+    padding: 0.3rem;
+}
+
+.card-versus__container {
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    padding-top: 1.1rem;
+}
+
+.versus-top,
+.versus-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.versus-bottom {
+    margin-top: 1.5rem;
+}
+
+#next-duel {
+    display: none;
+}
+
+.card-box {
+    height: 9rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: row;
+}
+
+.card-infield {
+    height: 11.2rem;
+    width: 8rem;
+    border: 1px solid #fff;
+    border-radius: 8px;
+} 
+
+.card {
+    transition: transform 0.2s;
+}
+
+.card:hover {
+    transform: scale(1.2);
+}
